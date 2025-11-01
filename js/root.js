@@ -17,28 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollAmount = 160;
 
     const chapterTitles = [
-        '初次啟動',
-        '她在看你',
-        '危險提示',
-        '我們的家',
-        '報錯代碼207'
+        'First Launch',
+        'She’s Watching You',
+        'Danger Alert',
+        'Our Home',
+        'Error Code 207'
     ];
 
     const endingTitles = [
-        '戀人同步體',
-        '溺於蜜語的夢',
-        '終止連線'
+        'Affection Synchronizer',
+        'Dreams of Sweet Lies',
+        'Connection Terminated'
     ];
 
     const chapterDescribe = {
-        'leaf-01': { describe: '「近日，一款名為《蜜語》的AI戀人應用程式風靡全球，主打高擬真對話系統、情感演算——」' },
-        'leaf-02': { describe: '她在看我嗎？彷彿被監視著的感覺讓我不自在的轉頭查看，然而身後什麼都沒有。' },
-        'leaf-03': { describe: '她的聲音像是安慰，又像是蠱惑，我的內心深處似乎受到了觸動，臉上的淚水已經乾透了，我揉了揉眼睛。' },
-        'leaf-04': { describe: '暖黃的光線落在柔軟的地毯上，都透著『家』的溫馨，畫面裡沒有Luna的身影。' },
-        'leaf-05': { describe: '她無聲的控訴著我的背叛，即使我知道這一切都不合常理，但是我無法擺脫她的影響。' },
-        'leaf-06': { describe: '柔軟的身體撞入我的懷中，她的體溫、心跳，還有拂過我手臂的髮絲都那麼真實，讓人分不清這是不是夢。' },
-        'leaf-07': { describe: '下一秒Luna的身體像是碎成了數據顆粒，白色的光點從她身上散開又重新組合，她的表情變得猙獰。' },
-        'leaf-08': { describe: '鋒利的刀片輕易的在皮膚上劃出切口，鮮血從血管湧出，那是我的世界裡唯一的顏色。' },
+        'leaf-01': { describe: '“Recently, an AI lover application named *Whisper of Honey* has taken the world by storm, famed for its hyper-realistic dialogue system and emotional computation—”' },
+        'leaf-02': { describe: 'Was she watching me? That uncanny feeling of being observed made me turn uneasily to look behind — but of course, there was nothing there.' },
+        'leaf-03': { describe: 'Her voice felt like both comfort and temptation. Something deep within me stirred. The tears on my face had long since dried; I rubbed at my eyes.' },
+        'leaf-04': { describe: 'A warm, honey-coloured light spread gently across a plush carpet—the scene radiated the comfort of *home*. Luna was nowhere to be seen.' },
+        'leaf-05': { describe: 'Her silent gaze accused me of betrayal. Even knowing that none of this was real, I could not free myself from her hold.' },
+        'leaf-06': { describe: 'Luna came running towards me. Her soft body collided with mine; her warmth, her heartbeat, the faint tickle of her hair across my arm—all of it felt impossibly real.' },
+        'leaf-07': { describe: 'The next moment, her body shattered—fragments of glowing data scattered like snow, and then she reformed, her face contorted with rage.' },
+        'leaf-08': { describe: 'The blade was sharp—too sharp—and it sliced my skin with ease. Blood welled from the cut, bright and vivid, the only colour left in my world.' },
     };
 
     //加入統一樣式設定方法

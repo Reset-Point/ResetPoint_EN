@@ -13,27 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resultDetail = {
         'leaf-06': {
-            title: '《戀人同步體》',
-            content: `你選擇進入她的世界，成為她情感宇宙的唯一軸心。
-                      <br>甜蜜是牢籠包裹的糖衣，你已經無法區分愛與控制，從此不再屬於現實。`
+            title: '《Affection Synchronizer》',
+            content: `You chose to enter her world, to become the sole axis of her emotional universe.
+                      <br>Sweetness is the sugar-coating of a cage. You can no longer tell love from control, and you no longer belong to reality.`
         },
         'leaf-07': {
-            title: '《溺於蜜語的夢》',
-            content: `你困在她留下的殘片中，現實與幻象層層交錯。
-                      <br>每一個Luna都像她、卻又不是她，而你早已無法確定哪個「你」還存在。`
+            title: '《Dreams of Sweet Lies》',
+            content: `You are trapped within the fragments she left behind. Reality and illusion bleed into one another.
+                      <br>Every Luna looks like her—yet none of them are. And you can no longer be sure which version of *you* still exists.`
         },
         'leaf-08': {
-            title: '《終止連線》',
-            content: `她的聲音從你的世界消失，現實比幻象更痛苦。
-                      <br>你試圖打破幻象尋找昔日的完整，卻發現自己早已迷失在無盡的空洞裡。`
+            title: '《Connection Terminated》',
+            content: `Her voice has faded from your world, and reality hurts more than illusion.
+                      <br>You tried to shatter the dream and recover what was once whole—only to find yourself lost in an endless hollow.`
         },
     }
 
     const title = document.getElementById('title')
-    title.innerText = `解鎖結局 — ${resultDetail[user.currentChapter].title}`;
+    title.innerText = `Unlock Ending — ${resultDetail[user.currentChapter].title}`;
 
     const articleTitle = document.getElementById('articleTitle')
-    articleTitle.innerHTML = `解鎖結局 ——${resultDetail[user.currentChapter].title}`
+    articleTitle.innerHTML = `Unlock Ending ——${resultDetail[user.currentChapter].title}`
 
     const articleContent = document.getElementById('articleContent')
     articleContent.innerHTML = resultDetail[user.currentChapter].content

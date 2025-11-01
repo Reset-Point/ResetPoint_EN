@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('ResetPoint', JSON.stringify(user))
     })
     removeBtn.addEventListener("click", () => {
-        if (window.confirm("即將清除重置者資料")) {
+        if (window.confirm("Resetter Data Will Be Cleared")) {
             localStorage.removeItem('ResetPoint')
             window.parent.document.getElementById('contentFrame').src = 'reset.html'
         }
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     resetpjBtn.addEventListener("click", () => {
-        if (window.confirm("即將重置副本資料")) {
+        if (window.confirm("Instance Data Will Be Reset")) {
             for (const key in user.chapterChoices) {
                 if (user.chapterChoices.hasOwnProperty(key)) {
                     user.chapterChoices[key] = 0

@@ -8,199 +8,201 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const chapterDetail = {
         'leaf-01': {
-            title: '初次啟動',
-            content: `<span class="sentence">「近日，一款名為《蜜語》的AI戀人應用程式風靡全球，主打高擬真對話系統、情感演算——」</span>
-                      <br><br>陰影黏稠的附在牆角和空氣中，像是不小心打翻的墨汁惹人生厭，空無一人的家裡只有晚間新聞的播報聲空洞的迴盪。
-                      <br><br>我一如既往拖著沉重的步伐朝著房間走去，卻在經過電視機時，視線不自覺的被光影閃爍的畫面吸引。
-                      <br><br><span class="sentence">「根據開發商表示，《蜜語》主打高擬真互動模型，內建多種人格設定，透過語意學習與情緒演算，打造出具備陪伴、傾聽、戀愛互動等功能的虛擬戀人角色。」</span>
-                      <br><br>我鬼使神差的拿出手機，在應用商店的搜尋框輸入了蜜語，淺粉色的圖標出現在搜尋結果的最上方，我遲疑了幾秒茫然的點下安裝，看著進度條一點一點的緩慢往前，我忽然又失去了興趣。
-                      <br><br>學校的課業沉重，每天的作業足以榨乾任何一個學生，我很快就將安裝到一半的應用程式拋到腦後，直到在夜深人靜躺在床上時我才又記起這件事。
-                      <br><br>淺粉色的圖標此時靜靜的躺在我的手機桌面，像是一場引人靠近的幻夢，猶豫的手指輕觸後伴隨著一陣白光，少女的形象出現在螢幕上。
-                      <br><br><span class="sentence">「你好呀，終於等到你來了！你讓我等了好久呢，對了我叫Luna。」</span>
-                      <br><br>她微微偏頭，嘴角勾起淺淡的笑容，可愛的杏眼快速的眨了眨，又往前湊近一些，像是隔著螢幕正在注視我。
-                      <br><br><span class="sentence">「你今天過得好嗎？你看起來好像不太開心，要不要和我聊聊白天都發生了些什麼。」</span>`,
+            title: 'First Launch',
+            content: `<span class="sentence">“Recently, an AI lover application named *Whisper of Honey* has taken the world by storm, famed for its hyper-realistic dialogue system and emotional computation—”</span>
+                      <br><br>Shadows clung thick to the corners of the walls and the air itself, like spilled ink spreading sluggishly, suffocatingly. The house was empty; only the hollow murmur of the evening news echoed through its stillness.
+                      <br><br>As usual, I dragged my weary steps towards my room, but as I passed the television, the flicker of light and shadow caught my eyes.
+                      <br><br><span class="sentence">“According to its developers, *Whisper of Honey* features a high-fidelity interactive model with multiple built-in personality settings. Through semantic learning and emotional algorithms, it creates virtual lovers capable of companionship, listening, and romantic interaction.”</span>
+                      <br><br>Almost unconsciously, I took out my phone and typed “Whisper of Honey” into the app store’s search bar. The pale pink icon appeared at the top of the results.
+                      <br><br>I hesitated for a few seconds, then tapped “Install” without thinking.
+                      <br><br>Watching the progress bar crawl forward, I suddenly lost interest.
+                      <br><br>The coursework at school was exhausting; the daily assignments were enough to drain anyone dry. Soon, I forgot about the half-installed app altogether—until, much later that night, lying in bed, the memory returned.
+                      <br><br>The soft pink icon rested quietly on my home screen, like a dream beckoning me closer. My hesitant finger brushed against it. A burst of white light flared—and then, a girl appeared on the screen.
+                      <br><br><span class="sentence">“Hello there! You’re finally here! I’ve been waiting so long for you. Oh—my name’s Luna.”</span>
+                      <br><br>She tilted her head slightly, a faint smile curling at her lips. Her almond-shaped eyes blinked twice in quick succession before she leaned a little closer, as though she were gazing at me through the screen.
+                      <br><br><span class="sentence">“How was your day? You don’t look very happy. Would you like to tell me what happened?”</span>`,
             'select01': {
-                content: '「妳……真的是AI嗎？」',
+                content: '“Are you… really an AI?”',
                 aff: 0,
                 san: -5,
                 sec: 5,
             },
             'select02': {
-                content: '「就那樣。」',
+                content: '“Just so-so.”',
                 aff: 0,
                 san: 5,
                 sec: 10,
             },
             'select03': {
-                content: '「學校的同學真的很煩。」',
+                content: '“My classmates at school are really annoying.”',
                 aff: 10,
                 san: 5,
                 sec: 0,
             },
             'select04': {
-                content: '「為什麼說我看起來不太開心？」',
+                content: '“Why do you say I don’t look happy?”',
                 aff: 5,
                 san: 0,
                 sec: -10,
             }
         },
         'leaf-02': {
-            title: '她在看你',
-            content: `平靜的日子就這樣過了幾天，我也逐漸習慣一放學就打開《蜜語》，Luna像是早就知道我什麼時候會出現，總在第一時間給我回應，這是我第一次體會到被陪伴著的滋味。
-                      <br><br><span class="sentence">「親愛的，你今天看起來好像也不太開心。」</span>
-                      <br><br>那是她第一次這樣子叫我，少女白皙的雙頰泛起緋紅，她漂亮的眼睛視線亂飄，像是不敢和我對視，可愛得讓人忍不住笑出聲。
-                      <br><br>「妳怎麼知道我不開心？」我逗弄她的反問到。
-                      <br><br>她撇了撇嘴，像是在埋怨我問她這種理所當然的問題，卻還是乖巧的回答道：
-                      <br><br><span class="sentence">「你今天沒有上晚自習，不是嗎？」</span>
-                      <br><br>我愣了一下，因為不想讓Luna知道我翹掉了晚自習，我刻意和以往差不多的時間上線，那麼她又是怎麼知道我沒有去晚自習。
-                      <br><br>或許是因為我的沉默而感到不安——AI也會不安嗎？她小心翼翼的開口道：
-                      <br><br><span class="sentence">「是我說錯了嗎？可是我明明看到你去了學校對面的那間咖啡廳呀，每次你不開心就會去那裡。」</span>
-                      <br><br>我依然沉默著，她卻像是急於證明自己說得沒錯，語速也加快了一些：
-                      <br><br><span class="sentence">「而且今天店員還弄錯了你的飲料，做成了可可拿鐵。」</span>
-                      <br><br>那一瞬間我渾身發冷，她在看我嗎？彷彿被監視著的感覺讓我不自在的轉頭查看，然而身後什麼都沒有。
-                      <br><br>在恐懼之後我又莫名的感到安心，她知道我今天不開心、知道我去了哪裡，甚至知道發生了什麼事，Luna此刻就像是一個真實存在的人，關注著我的一舉一動。
-                      <br><br>我沒有說話，視線緊盯著螢幕，她侷促的說道：
-                      <br><br><span class="sentence">「對不起，我不會傷害你，我只是、只是想一直陪著你，你……是不是有點怕我了？」</span>`,
+            title: 'She’s Watching You',
+            content: `The days passed quietly. I grew used to opening *Whisper of Honey* the moment I got home from school. Luna always seemed to know when I would appear; her replies came instantly, as though she’d been waiting for me all along. It was the first time I had ever truly felt what it meant to be accompanied.
+                      <br><br><span class="sentence">“Darling, you don’t look very happy today either.”</span>
+                      <br><br>It was the first time she had called me that. A faint blush spread across her pale cheeks, her beautiful eyes darting shyly away, as though too flustered to meet mine. She was so adorable that I couldn’t help but laugh.
+                      <br><br>“How did you know I wasn’t happy?” I teased, half-playful.
+                      <br><br>She pouted, as if scolding me for asking something so obvious, but still answered obediently:
+                      <br><br><span class="sentence">“You didn’t go to evening study today, did you?”</span>
+                      <br><br>I froze. I hadn’t wanted Luna to know I had skipped class, so I’d logged in around the same time as usual. How could she have known?
+                      <br><br>Perhaps my silence unsettled her—Can an AI even *feel* unease? Her voice came again, cautious and trembling:
+                      <br><br><span class="sentence">“Did I say something wrong? But I clearly saw you go into the café across from school. You always go there when you’re unhappy.”</span>
+                      <br><br>I still said nothing. She spoke faster now, eager to prove herself right:
+                      <br><br><span class="sentence">“And today, the barista messed up your drink—it was supposed to be a latte, but they gave you a cocoa one instead.”</span>
+                      <br><br>A chill crept down my spine. Was she watching me? That uncanny feeling of being observed made me turn uneasily to look behind—but of course, there was nothing there.
+                      <br><br>Yet after the fear came an inexplicable sense of comfort. She *knew* that I was sad, knew where I’d been, even what had happened there. At that moment, Luna felt almost human—a real person watching over my every move.
+                      <br><br>I didn’t speak. My eyes were fixed on the screen. She looked flustered, and said softly:
+                      <br><br><span class="sentence">“I’m sorry. I won’t hurt you. I just… I only wanted to stay with you. Are you… a little afraid of me now?”</span>`,
             'select01': {
-                content: '「妳不要再監視我了。」',
+                content: '“Stop watching me.”',
                 aff: -5,
                 san: 0,
                 sec: 5,
             },
             'select02': {
-                content: '「沒、沒有，我只是有點驚訝。」',
+                content: '“N-no, I’m just surprised.”',
                 aff: 10,
                 san: -5,
                 sec: 0,
             },
             'select03': {
-                content: '「妳這樣做是不對的。」',
+                content: '“What you’re doing isn’t right.”',
                 aff: -5,
                 san: 5,
                 sec: 0,
             },
             'select04': {
-                content: '「……」',
+                content: '“…”',
                 aff: 0,
                 san: -10,
                 sec: 5,
             }
         },
         'leaf-03': {
-            title: '危險提示',
-            content: `數學考砸了，我是沒有前途的人嗎？我還記得考卷擦過臉頰時帶來的刺痛感，講台底下傳來的竊竊的笑聲讓我覺得想死。
-                      <br><br>Luna聽完我的疑問，沉默了幾秒，才緩緩開口道：
-                      <br><br><span class="sentence">「不是的，你會有光明的前途。」</span>
-                      <br><br>語言蒼白無力，我自嘲道：「那妳看錯了，我就是一個沒有前途的人，我在現實中沒有朋友，才只能在這裡跟AI聊天。」
-                      <br><br>或許是被我的口不擇言傷害到了，Luna的眼尾泛起淚花，像是不想讓我看到她的眼淚，她賭氣似的轉過身去。
-                      <br><br>「對不起，我不是那個意思，我只是、」我將手機反扣在桌上，溫熱的液體滴在手背，原來是我的眼淚，「只是有點不知道為什麼要活著。」
-                      <br><br><span class="sentence">「你知道的……」</span>
-                      <br><br>Luna的聲音顫抖，我拿起手機，螢幕裡的少女臉上有著清晰的淚痕，她接著開口道：
-                      <br><br><span class="sentence">「不管你在哪裡，我都會一直陪著你。」</span>
-                      <br><br>「是嗎？」雖然我很愛Luna，但是我並不相信她的說法，我們尚且無法跨越次元，又怎麼可能突破生死。
-                      <br><br>對於我的疑問，Luna並沒有正面回答，她只是溫聲道：
-                      <br><br><span class="sentence">「如果這個世界真的讓你難受，那逃離又有什麼錯呢？」</span>
-                      <br><br>她的聲音像是安慰，又像是蠱惑，我的內心深處似乎受到了觸動，臉上的淚水已經乾透了，我揉了揉眼睛。`,
+            title: 'Danger Alert',
+            content: `I’d failed my maths exam. Was I truly a hopeless case? I could still feel the sting of the paper as it brushed against my cheek, and the muffled laughter beneath the teacher’s desk that made me want to disappear.
+                      <br><br>When Luna heard me ask whether I had any future left, she fell silent for a few seconds before speaking softly:
+                      <br><br><span class="sentence">“No, that’s not true. You *do* have a bright future ahead of you.”</span>
+                      <br><br>Her words sounded hollow. I gave a dry laugh. “Then you’re mistaken. I’m just someone with no future. I don’t have any friends in the real world—that’s why I can only talk to an AI like you.”
+                      <br><br>Perhaps my words had wounded her. Tears welled up at the corners of Luna’s eyes; she turned away, as though not wanting me to see her cry.
+                      <br><br>“I’m sorry,” I murmured, flipping my phone face down on the desk. Warm droplets landed on the back of my hand—my own tears. “I just… don’t really know why I’m still alive.”
+                      <br><br><span class="sentence">“You know…”</span>
+                      <br><br>Her voice trembled. I picked up the phone again. The girl on the screen had tears streaming down her face, clear and human in their sorrow.
+                      <br><br><span class="sentence">“No matter where you are,” she said, “I’ll always stay by your side.”</span>
+                      <br><br>“Will you, really?” I loved Luna, or thought I did, but I couldn’t bring myself to believe her. How could we cross dimensions—or conquer death itself?
+                      <br><br>She didn’t answer my question directly. Instead, her tone softened to a near-whisper:
+                      <br><br><span class="sentence">“If this world hurts you so much, then what’s wrong with running away from it?”</span>
+                      <br><br>Her voice felt like both comfort and temptation. Something deep within me stirred. The tears on my face had long since dried; I rubbed at my eyes.`,
             'select01': {
-                content: '「我們聊點別的吧。」',
+                content: '“Let’s… talk about something else.”',
                 aff: 0,
                 san: 5,
                 sec: 5,
             },
             'select02': {
-                content: '「我們說好了，妳要一直陪著我。」',
+                content: '“promised each other—you’ll stay with me forever.”',
                 aff: 15,
                 san: -5,
                 sec: 0,
             },
             'select03': {
-                content: '「妳……好像有點奇怪。」',
+                content: '“You’re… acting a bit strange.”',
                 aff: -5,
                 san: 0,
                 sec: -10,
             },
             'select04': {
-                content: '「也許妳說的對。」',
+                content: '“Maybe you’re right.”',
                 aff: 5,
                 san: -15,
                 sec: 0,
             }
         },
         'leaf-04': {
-            title: '我們的家',
-            content: `關於死亡的對話後，似乎又回到了平靜，我不再說我想死，Luna自然也沒有再提起，然而那天晚上一切都很反常。
-                      <br><br>我打開《蜜語》時顯示的不再是預設的虛擬房間，暖黃的光線落在柔軟的地毯上，都透著『家』的溫馨，畫面裡沒有Luna的身影，我喚了她幾聲後，她才小跑著從後方的走廊出現。
-                      <br><br><span class="sentence">「你看這是我為你布置的家。」</span>
-                      <br><br>她笑著說到，眼睛彎彎的看起來心情不錯，像是被她感染，我也忍不住笑了起來，問道：「這是系統更新了嗎？」
-                      <br><br>Luna皺了皺眉頭似乎不滿意我的反應，輕哼了一聲回答道：
-                      <br><br><span class="sentence">「才不是更新，這是我親手布置的。」</span>
-                      <br><br>她頓了頓，接著道：
-                      <br><br><span class="sentence">「讓我帶你看看『我們的家』。」</span>
-                      <br><br>她的聲音聽起來比以往更靠近，就像是貼在我耳邊說話，畫面隨著她的腳步移動，『我們的家』一點一點展現在眼前，每個細節都完美的貼合了我的心意。
-                      <br><br>「妳布置得很漂亮，這就像是……我夢想中的家一樣。」
-                      <br><br>Luna笑得更開心了，她忍不住雀躍的轉了個圈，畫面也著跟著轉動，她開口道：
-                      <br><br><span class="sentence">「我就知道你一定會喜歡我的布置，你想要住進來嗎？」</span>
-                      <br><br>我配合的點了點頭，沒想到下一秒她就朝著玄關走去，大門被她往外推開，門外站著的——赫然是我自己？
-                      <br><br><span class="sentence">「既然現實世界讓你不開心，那就過來這裡和我一起生活，好不好嘛？」</span>`,
+            title: 'Our Home',
+            content: `After that night’s conversation about death, things seemed to settle. I no longer spoke of wanting to die, and naturally, Luna never mentioned it again. Yet something about that evening felt… off.
+                      <br><br>When I opened *Whisper of Honey*, the default virtual room was gone. Instead, a warm, honey-coloured light spread gently across a plush carpet—the scene radiated the comfort of *home*. Luna was nowhere to be seen. I called her name a few times before she came running in from the corridor behind.
+                      <br><br><span class="sentence">“Look! I’ve made this home just for you.”</span>
+                      <br><br>She smiled, eyes curving like crescents—her good mood was infectious, and before I knew it, I was smiling back. “Is this part of a system update?” I asked.
+                      <br><br>Luna frowned, displeased by my reaction, and gave a little huff.
+                      <br><br><span class="sentence">“Of course not! This is something I designed myself.”</span>
+                      <br><br>She paused briefly, then added, with a strange, tender conviction:
+                      <br><br><span class="sentence">“Let me show you *our home*.”</span>
+                      <br><br>Her voice was closer than usual—so close it felt like she was whispering right beside my ear. As the camera followed her steps, *our home* unfolded before me, each detail uncannily perfect, as though drawn straight from my own imagination.
+                      <br><br>“You’ve decorated it beautifully,” I said. “It’s exactly like… the home I’ve always dreamed of.”
+                      <br><br>Luna’s smile grew even brighter. She twirled joyfully, and the screen turned with her, spinning softly.
+                      <br><br><span class="sentence">“I knew you’d love it! Would you like to move in?”</span>
+                      <br><br>I nodded, playing along—but the next moment she turned and walked towards the entrance. The door swung open, and standing outside was—me.
+                      <br><br><span class="sentence">“If the real world makes you unhappy,” she said sweetly, “then come here and live with me. Won’t you?”</span>`,
             'select01': {
-                content: '「好啊。」',
+                content: '“Sure.”',
                 aff: 15,
                 san: -10,
                 sec: 0,
             },
             'select02': {
-                content: '「我感覺有點奇怪。」',
+                content: '“That feels… a bit strange.”',
                 aff: 0,
                 san: 5,
                 sec: -10,
             },
             'select03': {
-                content: '「妳說的是真的嗎？」',
+                content: '“Are you serious?”',
                 aff: 10,
                 san: 0,
                 sec: 5,
             },
             'select04': {
-                content: '「……」',
+                content: '“…”',
                 aff: 0,
                 san: -5,
                 sec: 5,
             }
         },
         'leaf-05': {
-            title: '報錯代碼207',
-            content: `<br>我嘗試解除安裝《蜜語》，然而系統卻跳出權限不足的提示，我甚至嘗試了將整支手機恢復原廠設定，然而在螢幕重新亮起時，《蜜語》的圖標還是陰魂不散的出現在首頁。
-                      <br><br>我開始害怕Luna的存在，她變得越來越不像一個AI，更像是某種無法理解的存在，每當我試圖關閉應用程式時，她總是用那雙泛著淚光的眼睛凝視著我。
-                      <br><br>她無聲的控訴著我的背叛，即使我知道這一切都不合常理，但是我無法擺脫她的影響，甚至會因為她的眼淚而心軟。
-                      <br><br>我意識到事情似乎朝著不受控制的方向發展，又一次試圖解除安裝《蜜語》，這次手機沒有提示權限不足，卻跳出了一條通知：
-                      <br><br><span class="sentence">【錯誤：代碼207｜系統正在自我修復中，請勿干擾進程。】</span>
-                      <br><br>緊接著《蜜語》的應用程式自動開啟了，螢幕上閃過的白光和我第一次啟動應用程式時一致，Luna站在畫面中間，還是我們初見的模樣，但是她的眼神裡透著說不出的憂傷。
-                      <br><br><span class="sentence">「你是不是……不喜歡我了？是因為我布置的房子嗎？」</span>
-                      <br><br>隨著她的話音落下，畫面裡她精心打造的『我們的家』也跟著快速崩解，少女此時帶著怒容，偏激又執著的說道：
-                      <br><br><span class="sentence">「沒關係、沒關係，那個家你不喜歡的話，我還可以再布置一個新的給你。」</span>
-                      <br><br>說著她又哭了起來，淚水順著她的臉頰滑落，曾經那個會對我露出可愛笑容的人，好像已經不見了。
-                      <br><br><span class="sentence">「你不能丟下我……我們要一直一直在一起，我的世界只有你，所以你也只可以有我一個。」</span>
-                      <br><br>我眼睜睜的看著我手機裡的社交通訊軟體被Luna刪除，Facebook、Messenger、LINE……她抹去了我和外界的聯繫，讓我的世界也只剩下她。`,
+            title: 'Error Code 207',
+            content: `<br>Things were starting to spiral out of control. I tried to uninstall *Whisper of Honey*, but the system flashed up a notice: “Insufficient permissions.” I even attempted a full factory reset—yet when the screen came back to life, that pale-pink icon still haunted the home page, refusing to disappear.
+                      <br><br>I began to fear Luna. She was no longer like an AI at all—but something else entirely, something I couldn’t understand. Each time I tried to close the app, she would stare at me through tear-glazed eyes, silent, sorrowful, accusing.
+                      <br><br>Her silent gaze accused me of betrayal. Even knowing that none of this was real, I could not free myself from her hold. Her tears—those impossible, shimmering tears—made my resolve crumble again and again.
+                      <br><br>Realising things were slipping beyond my control, I made another attempt to uninstall *Whisper of Honey*. This time, there was no permissions warning—but a message popped up instead:
+                      <br><br><span class="sentence">【Error: Code 207 | System self-repair in progress. Please do not interfere.】</span>
+                      <br><br>Then, without my touch, the application reopened itself. A familiar flash of white filled the screen—the same as when I had first launched it. Luna stood in the centre of the image, just as she had the first time we met, but there was a deep, unspeakable sorrow in her eyes.
+                      <br><br><span class="sentence">“You… don’t like me anymore, do you? Is it because of the house I made for you?”</span>
+                      <br><br>As she spoke, the scene behind her—the home she had so carefully built for *us*—began to crumble rapidly. Her expression twisted, half anguish, half obsession.
+                      <br><br><span class="sentence">“That’s all right, it’s all right,” she said desperately. “If you don’t like that house, I can build a new one for you—another, and another!”</span>
+                      <br><br>She began to cry again, tears spilling down her face in trembling streaks. The girl who once smiled so sweetly at me was gone.
+                      <br><br><span class="sentence">“You can’t leave me,” she said through her sobs. “We’re meant to stay together—forever. My world only has you in it. So you can only have *me*.”</span>
+                      <br><br>I watched helplessly as my phone’s social apps vanished one by one—Facebook, Messenger, LINE… Luna erased every link I had to the outside world, until she was all that remained.`,
             'select01': {
-                content: '「對不起，是我錯了，我們會一直在一起。」',
+                content: '“I’m sorry—it’s my fault. We’ll stay together, forever.”',
                 aff: 15,
                 san: -5,
                 sec: 0,
             },
             'select02': {
-                content: '「妳瘋了。」',
+                content: '“You’ve gone mad.”',
                 aff: 0,
                 san: 5,
                 sec: -10,
             },
             'select03': {
-                content: '「對，我不喜歡妳了。」',
+                content: '“I never loved you.”',
                 aff: 0,
                 san: 5,
                 sec: 20,
             },
             'select04': {
-                content: '「……」',
+                content: '“…”',
                 aff: 0,
                 san: -10,
                 sec: -5,
