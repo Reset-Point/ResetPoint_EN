@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/logo.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="js/tool.js"></script>
+    <script src="js/home.js" defer></script>
+
+    <title>Reset Point</title>
+</head>
+
+<body>
+    <div id="loading" class="content">
+        <img src="assets/images/logo.png" alt="logo">
+        <div id="animatedLoading">
+            <div id="loadingBar"></div>
+            <p id="loadingText" class="jersey-15">LOADING......</p>
+        </div>
+    </div>
+
+    <div id="lobby" class="content">
+        <div class="topTool">
+            <!-- 個人資料 -->
+            <div id="profile">
+                <img src="assets/images/userProfile.png" alt="user profile">
+                <div id="profileDetail">
+                    <p id="profileName" class="lxgw-wenkai">用戶名稱</p>
+                    <p id="profileId" class="lxgw-wenkai">#05132468</p>
+                    <div id="profileExpBar">
+                        <div id="profileExpBarFill"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 工具列 -->
+            <div class="toolGroup">
+                <button class="tool" id="resetpjBtn"></button>
+                <button class="tool" id="removeBtn"></button>
+                <button class="tool" id="musicBtn"></button>
+                <button class="tool" id="settingBtn"></button>
+            </div>
+        </div>
+        <div id="lobbyBody">
+            <!-- 數值列表 -->
+            <div id="reseterData">
+                <p class="lxgw-wenkai">體力</p>
+                <div class="dataBar">
+                    <div id="strength" class="fill"></div>
+                </div>
+                <p class="lxgw-wenkai">智力</p>
+                <div class="dataBar">
+                    <div id="intelligence" class="fill"></div>
+                </div>
+                <p class="lxgw-wenkai">敏捷</p>
+                <div class="dataBar">
+                    <div id="agility" class="fill"></div>
+                </div>
+                <p class="lxgw-wenkai">運氣</p>
+                <div class="dataBar">
+                    <div id="fortune" class="fill"></div>
+                </div>
+            </div>
+            <!-- 中心 -->
+            <div id="game">
+                <p id="gameName" class="noto-serif">甜蜜偽像</p>
+                <div id="carouselContain">
+                    <div id="carousel"></div>
+                </div>
+                <button id="enterBtn" class="enter jersey-15">ENTER</button>
+            </div>
+            <!-- 任務列表 -->
+            <div id="mission">
+                <div id="missionTitle">
+                    <a href="mission.html">
+                        <p class="jersey-15">MISSION</p>
+                    </a>
+                </div>
+                <div id="missionDetail"></div>
+            </div>
+        </div>
+        <!-- 檔案資料 -->
+        <div id="gameDetail" class="hide-scrollbar">
+            <div id="gameIntro">
+                <p id="gameIntroTitle" class="lxgw-wenkai">檔案資料</p>
+                <p id="gameIntroContent" class="lxgw-wenkai"></p>
+            </div>
+            <div id="gameProgress">
+                <p id="gameProgressTitle" class="lxgw-wenkai">重置進度 <span id="gameRecord"></span> %</p>
+                <div id="gameProgressBar">
+                    <div id="fillGameProgressBar" class="fillGameProgressBar"></div>
+                </div>
+                <p id="unlockEndingTitle" class="lxgw-wenkai">解鎖結局（<span id="endingRecord"></span>）</p>
+                <div id="endings">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loadingBar = document.getElementById('loadingBar')
+        const totalBlocks = 22
+        const delayPerBlock = 30//300
+
+        let isPageLoaded = false
+        let isAnimationDone = false
+
+        for (let i = 1; i <= totalBlocks; i++) {
+            const block = document.createElement('div')
+            block.className = 'loadingBlock'
+
+            if (i == 1) block.id = 'leftBlock'
+            if (i == totalBlocks) block.id = 'rightBlock'
+
+            loadingBar.appendChild(block)
+
+            setTimeout(() => {
+                block.classList.add('visible')
+            }, i * delayPerBlock)
+        }
+
+        const totalTime = (totalBlocks + 1) * delayPerBlock
+
+        setTimeout(() => {
+            isAnimationDone = true
+            tryToEnterLobby()
+        }, totalTime)
+
+        window.onload = () => {
+            isPageLoaded = true
+            tryToEnterLobby()
+        }
+
+        function tryToEnterLobby() {
+            if (isPageLoaded && isAnimationDone) {
+                const userJson = localStorage.getItem('ResetPoint')
+
+                if (!userJson) {
+                    window.parent.document.getElementById('contentFrame').src = 'reset.html'
+                    return
+                }
+
+                document.getElementById('loading').style.display = 'none'
+                document.getElementById('lobby').style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>

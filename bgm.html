@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BGM Player</title>
+</head>
+
+<body>
+    <audio id="bgmPlayer" autoplay loop>
+        <source src="assets/Are You Lost.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const userJson = localStorage.getItem('ResetPoint')
+        const user = userJson ? JSON.parse(userJson) : { musicOn: true };
+        const bgmPlayer = document.getElementById('bgmPlayer');
+
+        if (user.musicOn) {
+            bgmPlayer.volume = 0.5;
+            bgmPlayer.play().catch(console.warn);
+        } else {
+            bgmPlayer.pause();
+        }
+
+        //接收來自父頁的音量或播放狀態更新
+        window.addEventListener('message', (event) => {
+            console.log(event.data)
+            if (event.data === 'play') {
+                document.getElementById('bgmPlayer').play();
+            } else if (event.data === 'pause') {
+                document.getElementById('bgmPlayer').pause();
+            }
+        });
+    </script>
+</body>
+
+</html>

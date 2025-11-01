@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/logo.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <title>Reset Point — Reset</title>
+
+    <script>
+        const user = localStorage.getItem('ResetPoint')
+        if (user) {
+            window.parent.document.getElementById('contentFrame').src = 'home.html'
+        }
+
+        function clamp(val, min, max) {
+            return Math.max(min, Math.min(max, val));
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const resetBtn = document.getElementById('resetBtn')
+            resetBtn.addEventListener('click', createUser)
+        });
+
+        function createUser() {
+            const now = new Date()
+            const minutes = now.getMinutes().toString().padStart(2, '0')
+            const seconds = now.getSeconds().toString().padStart(2, '0')
+
+            //角色四維能力值隨機（範圍：5-17）
+            function generateAttributes(total = 40, min = 5, max = 17) {
+                const attributeCount = 4;
+                const base = Array(attributeCount).fill(min);
+                let remaining = total - min * attributeCount;
+
+                //生成随机分布
+                for (let i = 0; i < attributeCount; i++) {
+                    const maxAdd = Math.min(remaining, max - base[i]);
+                    const add = Math.floor(Math.random() * (maxAdd + 1));
+                    base[i] += add;
+                    remaining -= add;
+                }
+
+                let i = 0;
+                while (remaining > 0) {
+                    const maxAdd = Math.min(remaining, max - base[i]);
+                    if (maxAdd > 0) {
+                        const add = Math.min(maxAdd, 1);
+                        base[i] += add;
+                        remaining -= add;
+                    }
+                    i = (i + 1) % attributeCount;
+                }
+
+                const shuffled = base.sort(() => Math.random() - 0.5);
+                const [strength, intelligence, agility, fortune] = shuffled;
+
+                return { strength, intelligence, agility, fortune };
+            }
+
+            const { strength, intelligence, agility, fortune } = generateAttributes(40);
+
+            //推導劇情屬性
+            let affection = Math.round(intelligence * 2.0 + fortune * 1.5);
+            let security = Math.round(strength * 1.7 + agility * 1.5);
+            let sanity = Math.round(intelligence * 1.0 + fortune * 1.2 + strength * 1.5 + agility * 0.7);
+
+            //限制在安全範圍（讓死亡偶爾發生）
+            affection = clamp(affection, 0, 50);
+            security = clamp(security, 0, 40);
+            sanity = clamp(sanity, 40, 100);
+
+            const userJson = {
+                name: `重置者${minutes}${seconds}`,
+                id: `#0513${minutes}${seconds}`,
+                experience: 40, //經驗值
+                strength: strength, //體力
+                intelligence: intelligence, //智力
+                agility: agility, //敏捷
+                fortune: fortune, //運氣
+                sanity: sanity, //san值
+                security: security, //安全感
+                affection: affection, //依附度
+                completedChapter: 0, //總進度
+                completedEndings: 0, //總結局
+                resetTimes: 0, //重置次數
+                resetChapter: 0, //目前章節 → 影響深淺灰色
+                currentChapter: 0,//"leaf-01", //打開章節
+                chapterChoices: {
+                    'leaf-01': 0,
+                    'leaf-02': 0,
+                    'leaf-03': 0,
+                    'leaf-04': 0,
+                    'leaf-05': 0
+                }, //章節選擇
+                endings: {
+                    1: false,
+                    2: false,
+                    3: false
+                }, //解鎖結局
+                missions: {
+                    'mission01': { currentProgress: 0, maxProgress: 4, rewardClaimed: false },
+                    'mission02': { currentProgress: 0, maxProgress: 1, rewardClaimed: false },
+                    'mission03': { currentProgress: 0, maxProgress: 3, rewardClaimed: false },
+                    'mission04': { currentProgress: 0, maxProgress: 5, rewardClaimed: false },
+                    'mission05': { currentProgress: 0, maxProgress: 3, rewardClaimed: false }
+                }, //任務統計
+                musicOn: true //音樂設置
+            }
+            localStorage.setItem('ResetPoint', JSON.stringify(userJson))
+
+            if (userJson.musicOn) {
+                parent.postMessage({ type: 'MUSIC', action: 'play' }, '*');
+            } else {
+                parent.postMessage({ type: 'MUSIC', action: 'pause' }, '*');
+            }
+
+            window.parent.document.getElementById('contentFrame').src = 'home.html'
+        }
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <img src="assets/images/logo.png" alt="">
+        <button id="resetBtn" class="jersey-15" type="button">RESET</button>
+    </div>
+</body>
+
+</html>

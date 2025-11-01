@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/logo.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/root.css">
+
+    <script src="js/tool.js"></script>
+    <script src="js/root.js" defer></script>
+
+    <title>Reset Point — 甜蜜偽像</title>
+</head>
+
+<body>
+    <div id="root" class="content">
+        <div class="topTool">
+            <div class="leave">
+                <a href="#" onclick="window.parent.document.getElementById('contentFrame').src = 'home.html'">
+                    <button class="tool">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
+            <img class="projectName" src="assets/images/name.png" alt="">
+            <div class="toolGroup">
+                <button class="tool" id="resetpjBtn"></button>
+                <button class="tool" id="removeBtn"></button>
+                <button class="tool" id="musicBtn"></button>
+                <button class="tool" id="settingBtn"></button>
+            </div>
+        </div>
+        <div id="rootBody">
+            <button id="leftBtn" class="switch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                </svg>
+            </button>
+            <div id="leaves" class="hide-scrollbar">
+                <p id="leaf-01" class="lxgw-wenkai leaf clicked">載入失敗請重新開啟</p>
+                <div class="line"></div>
+                <p id="leaf-02" class="lxgw-wenkai leaf closed">《？？？》</p>
+                <div class="line"></div>
+                <p id="leaf-03" class="lxgw-wenkai leaf closed">《？？？》</p>
+                <div class="line"></div>
+                <p id="leaf-04" class="lxgw-wenkai leaf closed">《？？？》</p>
+                <div class="line"></div>
+                <p id="leaf-05" class="lxgw-wenkai leaf closed">《？？？》</p>
+                <div class="line"></div>
+                <div class="endings">
+                    <div class="ending" style="margin-top: -2.7vh;">
+                        <div class="line"></div>
+                        <p id="leaf-06" class="lxgw-wenkai leaf closed">《？？？》</p>
+                    </div>
+                    <div class="ending">
+                        <div class="line"></div>
+                        <p id="leaf-07" class="lxgw-wenkai leaf closed">《？？？》</p>
+                    </div>
+                    <div class="ending" style="margin-bottom: -2.7vh;">
+                        <div class="line"></div>
+                        <p id="leaf-08" class="lxgw-wenkai leaf closed">《？？？》</p>
+                    </div>
+                </div>
+            </div>
+            <button id="rightBtn" class="switch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+        <div id="rootDetail" class="hide-scrollbar">
+            <div>
+                <p id="rootDetailTitle" class="lxgw-wenkai">節點資料</p>
+                <p id="rootIntroContent" class="lxgw-wenkai"></p>
+            </div>
+            <div id="enter">
+                <button id="enterBtn" class="active lxgw-wenkai">進入節點</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
