@@ -1,0 +1,124 @@
+#root {
+    display: block;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#rootBody {
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.switch {
+    height: 20vh;
+    width: 1.6vw;
+    background: var(--Text-Light-RGB);
+    cursor: pointer;
+}
+
+#leaves {
+    height: 100%;
+    max-width: 80vw;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+p.leaf {
+    padding-inline: 1vw;
+    padding-block: 1.6vh;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+p.clicked {
+    background: var(--Primary-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+p.visited {
+    background: var(--Text-Dark-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+p.closed {
+    background: var(--Text-Dark-RGB);
+    color: var(--Text-Dark-Color);
+    cursor: default;
+}
+
+div.line {
+    width: 4vw;
+    min-width: 60px;
+    height: 1px;
+    background: var(--Text-Dark-Color);
+}
+
+div.endings {
+    border-left: 1px solid var(--Text-Dark-Color);
+}
+
+div.ending {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-block: 2vh;
+}
+
+#rootDetail {
+    width: 60vw;
+    height: 17vh;
+    margin: auto;
+    border-radius: 3vh;
+    border: 2px solid var(--Text-Secondary-Color);
+    padding-inline: 2.6vw;
+    padding-block: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#rootDetailTitle {
+    font-size: 2vh;
+    color: var(--Text-Dark-Color);
+}
+
+#rootIntroContent {
+    margin: 0;
+    margin-top: 7px;
+    font-size: 1.8vh;
+    color: var(--Text-Dark-Color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+#enter {
+    display: flex;
+    justify-content: right;
+}
+
+#enterBtn {
+    height: 4vh;
+    width: 9vw;
+    font-size: 1.6vh;
+    border-radius: 7vh;
+}
+
+button.active {
+    background: var(--Primary-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+button.unactive {
+    background: var(--Text-Dark-RGB);
+    color: var(--Text-Dark-Color);
+    cursor: default;
+}

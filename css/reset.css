@@ -1,0 +1,14 @@
+div.content {
+    flex-direction: column;
+}
+
+#resetBtn {
+    height: 7vh;
+    width: 18vw;
+    margin-block: 7vh;
+    font-size: 5vh;
+    color: var(--Text-Secondary-Color);
+    border: 2px solid var(--Text-Secondary-Color);
+    border-radius: 7vh;
+    cursor: pointer;
+}

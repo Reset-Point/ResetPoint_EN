@@ -1,0 +1,47 @@
+#article {
+    display: block;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#articleBody {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#articleTitle {
+    font-size: 3vh;
+    color: var(--Text-Dark-Color);
+    text-align: center;
+}
+
+#articleContent {
+    font-size: 2vh;
+    color: var(--Text-Dark-Color);
+    text-align: center;
+    margin-top: 3vh;
+}
+
+#articleBtns {
+    width: 70vw;
+    height: 17vh;
+    margin: auto;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#goLobby {
+    height: 4vh;
+    padding-inline: 2vw;
+    margin-block: 7vh;
+    font-size: 3vh;
+    color: var(--Text-Secondary-Color);
+    border: 1.6px solid var(--Text-Secondary-Color);
+    border-radius: 7vh;
+    cursor: pointer;
+}

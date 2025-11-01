@@ -1,0 +1,323 @@
+#loading {
+    flex-direction: column;
+    z-index: 99;
+}
+
+#animatedLoading {
+    height: 21vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#loadingBar {
+    height: 4vh;
+    width: 39.8vw;
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4vh;
+    border: 2px solid var(--Text-Secondary-Color);
+    padding: 2px;
+}
+
+div.loadingBlock {
+    height: 3.8vh;
+    width: 1.6vw;
+    min-width: 1.6vw;
+    margin-inline: 0.105vw;
+}
+
+div.visible {
+    background: var(--Primary-Color);
+}
+
+#leftBlock {
+    border-top-left-radius: 4vh;
+    border-bottom-left-radius: 4vh;
+}
+
+#rightBlock {
+    border-top-right-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+}
+
+#loadingText {
+    width: 39.8vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 2vh;
+    font-size: 4vh;
+    color: var(--Text-Secondary-Color);
+}
+
+#lobby {
+    display: none;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#profile {
+    padding-block: 2vh;
+    display: flex;
+}
+
+#profile img {
+    width: 10vh;
+    height: 10vh;
+    min-width: 10vh;
+    min-height: 10vh;
+    border-radius: 1vh;
+}
+
+#profileDetail {
+    margin: auto;
+    margin-left: 1vw;
+}
+
+#profileName {
+    font-size: 1.2rem;
+    color: var(--Text-Dark-Color);
+}
+
+#profileId {
+    margin-block: 0.5vh;
+    font-size: 0.9rem;
+    color: var(--Text-Dark-Color);
+}
+
+#profileExpBar {
+    position: relative;
+    height: 1vh;
+    width: 10vw;
+    background: var(--Unfilled-Color);
+}
+
+#profileExpBarFill {
+    height: 1vh;
+    width: 10vw;
+    background: var(--Primary-Color);
+}
+
+#lobbyBody {
+    height: 60vh;
+    display: flex;
+}
+
+#reseterData {
+    width: 12vw;
+    margin-top: 10vh;
+    margin-right: 0.5vw;
+}
+
+div.dataBar {
+    position: relative;
+    height: 1vh;
+    width: 10vw;
+    background: var(--Unfilled-Color);
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+div.fill {
+    height: 1vh;
+    width: 10vw;
+    background: var(--Primary-Color);
+}
+
+#game {
+    width: 73vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 900px;
+}
+
+#gameName {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--Text-Dark-Color);
+}
+
+#carouselContain {
+    perspective: 3000px;
+    perspective-origin: center center;
+    width: 73vw;
+    height: 42vh;
+    min-width: 900px;
+    position: relative;
+}
+
+#carousel {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+div.card {
+    width: 16vh;
+    height: 24vh;
+    background: linear-gradient(to bottom, var(--BackgroundTop-Color), var(--BackgroundBottom-Color));
+    border-radius: 2vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 8vh 0 0 -4vw;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    backface-visibility: hidden;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+div.card.active {
+    transform: scale(1.2) !important;
+    z-index: 10;
+    background: var(--BackgroundTop-Color);
+}
+
+img.cover {
+    width: 16vh;
+    height: 24vh;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+#enterBtn {
+    height: 5vh;
+    width: 12vw;
+    font-size: 4vh;
+    border-radius: 7vh;
+}
+
+button.enter {
+    background: var(--Primary-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+button.locked {
+    background: var(--Unfilled-Color);
+    color: var(--Text-Dark-Color);
+    cursor: default;
+}
+
+#mission {
+    width: 12.5vw;
+    margin-top: 7vh;
+}
+
+#missionTitle {
+    background: var(--Text-Dark-Color);
+}
+
+#missionTitle p {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--Text-Light-Color);
+    padding-block: 0.5vh;
+}
+
+#missionDetail {
+    margin-top: 0.5vh;
+    height: 30vh;
+    background: var(--Text-Dark-RGB);
+    padding: 0.4vw;
+}
+
+p.perMission {
+    color: var(--Text-Dark-Color);
+    font-size: 1.6vh;
+    margin-block: 1vh;
+}
+
+span.missionRecord {
+    display: inline-block;
+    width: 2vw;
+    font-size: 2vh;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
+
+div.line {
+    height: 1px;
+    background: var(--Text-Dark-Color);
+}
+
+#gameDetail {
+    width: 60vw;
+    height: 17vh;
+    margin: auto;
+    border-radius: 3vh;
+    border: 2px solid var(--Text-Secondary-Color);
+    padding-inline: 2.6vw;
+    padding-block: 2vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+#gameIntroTitle {
+    font-size: 2vh;
+    color: var(--Text-Dark-Color);
+}
+
+#gameIntroContent {
+    margin: 0;
+    margin-top: 7px;
+    font-size: 1.8vh;
+    color: var(--Text-Dark-Color);
+}
+
+#gameProgress {
+    margin-left: 2vw;
+    margin-block: 1vh;
+    min-width: 150px;
+}
+
+#gameProgressTitle {
+    font-size: 1.1rem;
+    color: var(--Text-Dark-Color);
+    margin-bottom: 1vh;
+}
+
+#gameProgressBar {
+    position: relative;
+    height: 1vh;
+    width: 10vw;
+    background: var(--Unfilled-Color);
+    min-width: 140px;
+}
+
+div.fillGameProgressBar {
+    height: 1vh;
+    width: 8vw;
+    background: var(--Primary-Color);
+}
+
+#unlockEndingTitle {
+    font-size: 1.1rem;
+    color: var(--Text-Dark-Color);
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+#endings {
+    display: flex;
+}
+
+div.lockEndingCircle {
+    height: 1.8vh;
+    width: 1.8vh;
+    border-radius: 1vh;
+    background: var(--Unfilled-Color);
+    margin-right: 0.6vw;
+}
+
+div.unlockEndingCircle {
+    height: 1.8vh;
+    width: 1.8vh;
+    border-radius: 1vh;
+    background: var(--Primary-Color);
+    margin-right: 0.6vw;
+}

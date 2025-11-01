@@ -1,0 +1,87 @@
+#mission {
+    display: block;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#topTitle {
+    font-size: 5vh;
+    color: var(--Text-Dark-Color);
+    margin-top: 9vh;
+}
+
+#missionBody {
+    width: 80vw;
+    margin: auto;
+}
+
+#topBar {
+    background: var(--Text-Dark-Color);
+    margin-top: 3vh;
+}
+
+#topBar p {
+    color: var(--Text-Light-Color);
+    font-size: 2vh;
+    padding: 1vh;
+}
+
+div.perMission {
+    padding-inline: 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.perMission p {
+    color: var(--Text-Dark-Color);
+    margin-block: 2vh;
+}
+
+div.perMission div {
+    display: flex;
+    align-items: center;
+}
+
+div.missionBar {
+    position: relative;
+    height: 1vh;
+    width: 8vw;
+    background: var(--Unfilled-Color);
+}
+
+div.fillMissionBar {
+    height: 1vh;
+    width: 6vw;
+    background: var(--Primary-Color);
+}
+
+button.clear {
+    display: none;
+    height: 3vh;
+    width: 8vw;
+    border-radius: 1.5vh;
+    font-size: 2.4vh;
+    background: var(--Primary-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+p.missionRecord {
+    width: 6vw;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+div.line {
+    height: 1px;
+    background: var(--Text-Dark-RGB);
+    margin-inline: 1vw;
+}
+
+#clearAll {
+    display: none;
+    font-size: 5vh;
+    margin-top: 5vh;
+    color: var(--Primary-Color);
+    text-align: center;
+}

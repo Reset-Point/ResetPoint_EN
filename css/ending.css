@@ -1,0 +1,52 @@
+#article {
+    display: block;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#articleBody {
+    height: 60vh;
+    width: 60vw;
+    margin-inline: auto;
+}
+
+#articleContent {
+    height: 58.6vh;
+    font-size: 2vh;
+    color: var(--Text-Dark-Color);
+    overflow-y: scroll;
+}
+
+#articleBtns {
+    width: 70vw;
+    height: 17vh;
+    margin: auto;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#showResult {
+    height: 4vh;
+    width: 20vw;
+    border-radius: 2vh;
+    margin-inline: 1.6vw;
+    font-size: 1.8vh;
+    padding-inline: 1vw;
+}
+
+button.unactive {
+    background: var(--Text-Dark-RGB);
+    color: var(--Text-Dark-Color);
+}
+
+button.active {
+    background: var(--Primary-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+span.sentence {
+    color: var(--Text-Secondary-Color);
+}

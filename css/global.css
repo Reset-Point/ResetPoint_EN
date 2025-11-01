@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+:root {
+    --BackgroundTop-Color: #D1C0CA;
+    --BackgroundBottom-Color: #C3CBD8;
+    --Primary-Color: #B18EAC;
+    --Unfilled-Color: #66696E;
+    /*5*/
+    --Text-Dark-Color: #404145;
+    --Text-Dark-RGB: rgba(60, 65, 69, 0.5);
+    /*6*/
+    --Text-Light-Color: #EDF6F1;
+    --Text-Light-RGB: rgba(237, 246, 241, 0.5);
+    /*7*/
+    --Text-Secondary-Color: #73767D;
+    /*4*/
+}
+
+.jersey-15 {
+    font-family: "Jersey 15", sans-serif;
+    margin: 0;
+}
+
+.lxgw-wenkai {
+    font-family: "LXGW WenKai TC", cursive;
+    margin: 0;
+}
+
+.noto-serif {
+    font-family: "Noto Serif TC", serif;
+    margin: 0;
+}
+
+/*隱藏滾軸工具*/
+.hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    margin: auto;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--BackgroundTop-Color), var(--BackgroundBottom-Color));
+}
+
+div.content {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.topTool {
+    display: flex;
+    justify-content: space-between;
+    height: 14vh;
+}
+
+div.leave {
+    width: 20vw;
+    padding-top: 1vh;
+}
+
+div.toolGroup {
+    width: 20vw;
+    display: flex;
+    justify-content: right;
+    padding-top: 1vh;
+}
+
+a {
+    outline: none;
+}
+
+button.tool {
+    width: 3.6vh;
+    height: 3.6vh;
+    border-radius: 1.8vh;
+    padding: 5px;
+    border: 1px solid var(--Text-Dark-RGB);
+    background: var(--Text-Light-RGB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-inline: 5px;
+    outline: none;
+}
+
+svg.icon {
+    color: var(--Text-Dark-RGB);
+}
+
+img.projectName {
+    height: 4.6vh;
+    margin-top: 2vh;
+    object-fit: cover;
+    overflow: hidden;
+}

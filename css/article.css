@@ -1,0 +1,62 @@
+#article {
+    display: block;
+    padding-block: 1vh;
+    padding-inline: 1vw;
+}
+
+#articleBody {
+    height: 60vh;
+    width: 60vw;
+    margin-inline: auto;
+}
+
+#articleContent {
+    height: 58.6vh;
+    font-size: 2vh;
+    color: var(--Text-Dark-Color);
+    overflow-y: scroll;
+}
+
+#articleBtns {
+    width: 70vw;
+    height: 17vh;
+    margin: auto;
+    padding-top: 2vh;
+}
+
+#articleBtns div {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+}
+
+button.choose {
+    height: 5vh;
+    width: 26vw;
+    border-radius: 2.5vh;
+    margin-inline: 1.6vw;
+    font-size: 1.8vh;
+    text-align: left;
+    background: var(--Text-Secondary-Color);
+    color: var(--Text-Dark-Color);
+    padding-inline: 1vw;
+}
+
+button.active {
+    background: var(--Text-Dark-Color);
+    color: var(--Text-Light-Color);
+    cursor: pointer;
+}
+
+button.active:hover {
+    background: var(--Primary-Color);
+}
+
+button.selected {
+    background: var(--Primary-Color);
+    cursor: default;
+}
+
+span.sentence {
+    color: var(--Text-Secondary-Color);
+}
