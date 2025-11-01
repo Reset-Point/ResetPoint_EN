@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const title = document.getElementById('title')
-    title.innerText = `甜蜜偽像 — ${endingDetail[user.currentChapter].title}`;
+    title.innerText = `Sweet Illusion — ${endingDetail[user.currentChapter].title}`;
 
     const articleContent = document.getElementById('articleContent')
     articleContent.innerHTML = endingDetail[user.currentChapter].content

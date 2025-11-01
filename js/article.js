@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chapter = chapterDetail[user.currentChapter];
 
     //設定章節標題與內容
-    title.innerText = `甜蜜偽像 — ${chapter.title}`;
+    title.innerText = `Sweet Illusion — ${chapter.title}`;
     articleContent.innerHTML = chapter.content;
 
     //設定選項文字

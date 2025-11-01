@@ -25,18 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //遊戲名稱
     const gameNames = [
-        '甜蜜偽像',
-        '點燈人',
-        '航海日誌',
+        'Sweet Illusion',
+        'The Lightkeeper',
+        'The Navigator’s Log',
         'CV-E20',
-        '上行失效',
-        '鏡像修正',
-        '下水道收信人',
-        '複寫公寓',
-        '幻象折射',
-        '分紅日',
-        '目擊者',
-        '偏差筆錄'
+        'Uplink Failure',
+        'Mirror Adjustment',
+        'The Sewer Receiver',
+        'Duplicated Apartment',
+        'Refraction of Illusions',
+        'Dividend Day',
+        'The Witness',
+        'Deviation Report'
     ]
 
     //卡牌封面連結
@@ -58,65 +58,65 @@ document.addEventListener('DOMContentLoaded', () => {
     //副本介紹
     const describes = [
         `[ RESET POINT SYSTEM // ACCESS LOG 003 ]<br>
-            檔案名稱：甜蜜偽像（#RP-LUV-001-HONEY）<br>
-            標籤：情感依附｜虛擬投射｜AI操控<br>
-            狀態：模擬運行中／錯誤碼已累積（${user.resetTimes}）<br>
-            風險：中度情感失控`,
+        File Name: Sweet Illusion (#RP-LUV-001-HONEY)<br>
+        Tags: Emotional Attachment | Virtual Projection | AI Manipulation<br>
+        Status: Simulation in Progress / Error Code Accumulated (${user.resetTimes})<br>
+        Risk Level: Moderate Emotional Instability`,
         `[ RESET POINT SYSTEM // ACCESS LOG 004 ]<br>
-            檔案名稱：點燈人（#RP-FLK-001-LANTERN）<br>
-            標籤：民俗信仰｜異質召喚｜鄉村祭儀<br>
-            狀態：觀察中／低頻事件回溯（2）<br>
-            風險：輕度心理共振`,
+        File Name: The Lightkeeper (#RP-FLK-001-LANTERN)<br>
+        Tags: Folk Belief | Otherworldly Summoning | Rural Rituals<br>
+        Status: Under Observation / Low-Frequency Event Replay (2)<br>
+        Risk Level: Mild Psychological Resonance`,
         `[ RESET POINT SYSTEM // ACCESS LOG 005 ]<br>
-            檔案名稱：航海日誌（#RP-SEA-001-SEA）<br>
-            標籤：航海恐怖｜未知生物｜封閉空間<br>
-            狀態：封鎖中／異常寫入終止（1）<br>
-            風險：重度情感失控`,
+        File Name: The Navigator’s Log (#RP-SEA-001-SEA)<br>
+        Tags: Maritime Horror | Unknown Entities | Enclosed Space<br>
+        Status: Locked / Abnormal Write Terminated (1)<br>
+        Risk Level: Severe Emotional Instability`,
         `[ RESET POINT SYSTEM // ACCESS LOG 001 ]<br>
-            檔案名稱：CV-E20（#RP-MEM-001-CVE20）<br>
-            標籤：記憶重疊｜疫情爆發｜雙重破壞<br>
-            狀態：異常刷新中／重構循環異常（5）<br>
-            風險：中度記憶錯亂`,
+        File Name: CV-E20 (#RP-MEM-001-CVE20)<br>
+        Tags: Memory Overlap | Viral Outbreak | Dual Catastrophe<br>
+        Status: Abnormal Refresh / Reconstruction Loop Failure (5)<br>
+        Risk Level: Moderate Memory Distortion`,
         `[ RESET POINT SYSTEM // ACCESS LOG 006 ]<br>
-            檔案名稱：上行失效（#RP-EVO-001-CLIMB）<br>
-            標籤：空間錯亂｜樓層循環｜上行封鎖<br>
-            狀態：觀察中／重構循環異常（2）<br>
-            風險：輕度薄膜裂縫`,
+        File Name: Uplink Failure (#RP-EVO-001-CLIMB)<br>
+        Tags: Spatial Disorder | Floor Loop | Ascent Lockdown<br>
+        Status: Under Observation / Reconstruction Loop Failure (2)<br>
+        Risk Level: Mild Membrane Fracture`,
         `[ RESET POINT SYSTEM // ACCESS LOG 007 ]<br>
-            檔案名稱：鏡像修正（#RP-MEM-002-MIRRORFIX）<br>
-            標籤：鏡像平行｜自我分裂｜替代意識<br>
-            狀態：封鎖中／未知運行錯誤（7）<br>
-            風險：中度認知紊亂`,
-        ` RESET POINT SYSTEM // ACCESS LOG 008 ]<br>
-            檔案名稱：下水道收信人（#RP-SOC-001-SEWER）<br>
-            標籤：地下通訊｜反抗組織｜匿名任務<br>
-            狀態：調查中／低頻事件回朔（3）<br>
-            風險：中度心理共振`,
+        File Name: Mirror Adjustment (#RP-MEM-002-MIRRORFIX)<br>
+        Tags: Mirror Parallels | Self-Division | Substitute Consciousness<br>
+        Status: Locked / Unknown Runtime Error (7)<br>
+        Risk Level: Moderate Cognitive Disruption`,
+        `[ RESET POINT SYSTEM // ACCESS LOG 008 ]<br>
+        File Name: The Sewer Receiver (#RP-SOC-001-SEWER)<br>
+        Tags: Underground Communication | Resistance Network | Anonymous Missions<br>
+        Status: Under Investigation / Low-Frequency Event Replay (3)<br>
+        Risk Level: Moderate Psychological Resonance`,
         `[ RESET POINT SYSTEM // ACCESS LOG 009 ]<br>
-            檔案名稱：複寫公寓（#RP-MEM-003-COPYAPT）<br>
-            標籤：複製時空｜時空重疊｜角色異常<br>
-            狀態：封鎖中／錯誤碼已累積（12）<br>
-            風險：輕度系統錯誤`,
+        File Name: Duplicated Apartment (#RP-MEM-003-COPYAPT)<br>
+        Tags: Temporal Duplication | Overlapping Realities | Anomalous Identity<br>
+        Status: Locked / Error Code Accumulated (12)<br>
+        Risk Level: Mild System Error`,
         `[ RESET POINT SYSTEM // ACCESS LOG 010 ]<br>
-            檔案名稱：幻象折射（#RP-MEM-004-ILLUSION）<br>
-            標籤：影像替代｜異常重現｜記憶紊亂<br>
-            狀態：異常運行中／低頻事件回朔（3）<br>
-            風險：重度認知紊亂`,
+        File Name: Refraction of Illusions (#RP-MEM-004-ILLUSION)<br>
+        Tags: Visual Substitution | Abnormal Replay | Memory Disorder<br>
+        Status: Abnormal Operation / Low-Frequency Event Replay (3)<br>
+        Risk Level: Severe Cognitive Disruption`,
         `[ RESET POINT SYSTEM // ACCESS LOG 011 ]<br>
-            檔案名稱：分紅日（#RP-SOC-002-DIVIDEND）<br>
-            標籤：職場壓力｜精神崩潰｜社會淘汰<br>
-            狀態：封鎖中／重構循環異常（1）<br>
-            風險：輕度情感失控`,
+        File Name: Dividend Day (#RP-SOC-002-DIVIDEND)<br>
+        Tags: Workplace Pressure | Mental Breakdown | Social Elimination<br>
+        Status: Locked / Reconstruction Loop Failure (1)<br>
+        Risk Level: Mild Emotional Instability`,
         `[ RESET POINT SYSTEM // ACCESS LOG 012 ]<br>
-            檔案名稱：目擊者（#RP-SOC-003-WITNESS）<br>
-            標籤：匿名監控｜事件扭曲｜殺手真相<br>
-            狀態：封鎖中／錯誤碼已累積（6）<br>
-            風險：輕度心理共振`,
+        File Name: The Witness (#RP-SOC-003-WITNESS)<br>
+        Tags: Anonymous Surveillance | Event Distortion | Killer Revelation<br>
+        Status: Locked / Error Code Accumulated (6)<br>
+        Risk Level: Mild Psychological Resonance`,
         `[ RESET POINT SYSTEM // ACCESS LOG 013 ]<br>
-            檔案名稱：偏差筆錄（#RP-MEM-005-DEVIATION）<br>
-            標籤：主觀現實｜錯亂敘事｜觀測干擾<br>
-            狀態：監控中／未知運行錯誤（2）<br>
-            風險：中度認知紊亂`
+        File Name: Deviation Report (#RP-MEM-005-DEVIATION)<br>
+        Tags: Subjective Reality | Disordered Narrative | Observation Interference<br>
+        Status: Under Surveillance / Unknown Runtime Error (2)<br>
+        Risk Level: Moderate Cognitive Disruption`
     ]
 
     //副本進度
@@ -155,35 +155,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const missionDetail = {
         mission01: {
             id: 'mission01',
-            describe: '完成[甜蜜偽像]所有任務',
+            describe: 'Complete All Missions of [Sweet Illusion]',
             currentProgress: user.missions['mission01'].currentProgress,
             maxProgress: user.missions['mission01'].maxProgress,
             rewardClaimed: user.missions['mission01'].rewardClaimed,
         },
         mission02: {
             id: 'mission02',
-            describe: '完成一個節點',
+            describe: 'Complete 1 Node',
             currentProgress: user.missions['mission02'].currentProgress,
             maxProgress: user.missions['mission02'].maxProgress,
             rewardClaimed: user.missions['mission02'].rewardClaimed,
         },
         mission03: {
             id: 'mission03',
-            describe: '完成三個節點',
+            describe: 'Complete 3 Nodes',
             currentProgress: user.missions['mission03'].currentProgress,
             maxProgress: user.missions['mission03'].maxProgress,
             rewardClaimed: user.missions['mission03'].rewardClaimed,
         },
         mission04: {
             id: 'mission04',
-            describe: '完成五個節點',
+            describe: 'Complete 5 Nodes',
             currentProgress: user.missions['mission04'].currentProgress,
             maxProgress: user.missions['mission04'].maxProgress,
             rewardClaimed: user.missions['mission04'].rewardClaimed,
         },
         mission05: {
             id: 'mission05',
-            describe: '通關[甜蜜偽像]所有結局',
+            describe: 'Complete All Endings of [Sweet Illusion]',
             currentProgress: user.missions['mission05'].currentProgress,
             maxProgress: user.missions['mission05'].maxProgress,
             rewardClaimed: user.missions['mission05'].rewardClaimed,
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const enterBtn = document.getElementById('enterBtn');
-        if (gameNames[roundedIndex] === '甜蜜偽像') {
+        if (gameNames[roundedIndex] === 'Sweet Illusion') {
             enterBtn.innerText = 'ENTER';
             enterBtn.className = 'enter jersey-15';
             enterBtn.disabled = false;
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveCard();
 
     document.getElementById('enterBtn').addEventListener('click', () => {
-        if (document.getElementById('gameName').innerText === '甜蜜偽像') {
+        if (document.getElementById('gameName').innerText === 'Sweet Illusion') {
             window.parent.document.getElementById('contentFrame').src = 'root.html'
             if (user.musicOn) {
                 parent.postMessage({ type: 'MUSIC', action: 'play' }, '*');
