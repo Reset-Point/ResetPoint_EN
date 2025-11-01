@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sec: 5,
             },
             'select02': {
-                content: '“promised each other—you’ll stay with me forever.”',
+                content: '“We promised each other—you’ll stay with me forever.”',
                 aff: 15,
                 san: -5,
                 sec: 0,
